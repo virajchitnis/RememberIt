@@ -4,7 +4,7 @@ var packageJSON = require('../package.json');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { app_name: packageJSON.name });
 });
 
 /* GET login page. */

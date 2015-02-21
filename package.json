@@ -3,9 +3,9 @@
 	"version": "0.0.0",
 	"private": true,
 	"scripts": {
-		"sass-style": "node-sass --debug --output-style compressed design/style.scss -o public/stylesheets/",
+		"sass-index": "node-sass --debug --output-style compressed design/index.scss -o public/stylesheets/",
 		"sass-login": "node-sass --debug --output-style compressed design/login.scss -o public/stylesheets/",
-		"sass": "npm run sass-style && npm run sass-login",
+		"sass": "npm run sass-index && npm run sass-login",
 		"start-node": "node ./bin/www",
 		"start": "npm run sass && npm run start-node"
 	},
