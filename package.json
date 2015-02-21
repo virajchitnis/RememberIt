@@ -1,19 +1,22 @@
 {
-  "name": "RememberIt",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "start": "node ./bin/www"
-  },
-  "dependencies": {
-    "body-parser": "~1.10.1",
-    "cookie-parser": "~1.3.3",
-    "debug": "~2.1.1",
-    "ejs": "~2.1.4",
-    "express": "~4.11.0",
-    "morgan": "~1.5.1",
-    "node-sass": "^2.0.1",
-    "serve-favicon": "~2.2.0",
-    "yuicompressor": "^2.4.8"
-  }
+	"name": "RememberIt",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"sass-style": "node-sass --debug --output-style compressed design/style.scss -o public/stylesheets/",
+		"sass": "npm run sass-style",
+		"start-node": "node ./bin/www",
+		"start": "npm run sass && npm run start-node"
+	},
+	"dependencies": {
+		"body-parser": "~1.10.1",
+		"cookie-parser": "~1.3.3",
+		"debug": "~2.1.1",
+		"ejs": "~2.1.4",
+		"express": "~4.11.0",
+		"morgan": "~1.5.1",
+		"node-sass": "^2.0.1",
+		"serve-favicon": "~2.2.0",
+		"yuicompressor": "^2.4.8"
+	}
 }

@@ -1,0 +1,74 @@
+@import url(http://fonts.googleapis.com/css?family=Slabo+27px);
+
+$font-stack: 'Slabo 27px', serif;
+
+@mixin breakpoint($breakpoint) {
+	@if $breakpoint == "xs" {
+		@media (max-width: 767px) { @content; }
+	}
+	
+	@else if $breakpoint == "sm" {
+		@media (min-width: 768px) { @content; }
+	}
+ 
+	@else if $breakpoint == "md" {
+		@media (min-width: 992px) { @content; }
+	}
+ 
+	@else if $breakpoint == "lg" {
+		@media (min-width: 1200px) { @content; }
+	}
+	
+	@else {
+		@warn "Breakpoint mixin supports: xs, sm, md, lg only";
+	}
+}
+
+@mixin rotate($degrees) {
+	-moz-transform: rotate($degrees);
+	-webkit-transform: rotate($degrees);
+	-ms-transform: rotate($degrees);
+	-o-transform: rotate($degrees);
+	transform: rotate($degrees);
+}
+
+@mixin blur($size) {
+	-webkit-filter: blur($size);
+	-moz-filter: blur($size);
+	-ms-filter: blur($size);
+	-o-filter: blur($size);
+	filter: blur($size);
+}
+
+@mixin animation($name, $duration) {
+	-webkit-animation: $name $duration;
+	-moz-animation: $name $duration;
+	-ms-animation: $name $duration;
+	-o-animation: $name $duration;
+	animation: $name $duration;
+}
+
+@mixin keyframes($name) {
+	@-webkit-keyframes #{$name} {
+		@content; 
+	}
+	@-moz-keyframes #{$name} {
+		@content;
+	}
+	@-ms-keyframes #{$name} {
+		@content;
+	}
+	@-o-keyframes #{$name} {
+		@content;
+	}
+	@keyframes #{$name} {
+		@content;
+	}
+}
+
+* {
+	margin: 0;
+	font-family: $font-stack;
+	font-weight: 400;
+	line-height: 1.5;
+}
