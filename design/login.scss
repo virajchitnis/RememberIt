@@ -11,5 +11,10 @@
 
 #login-panel {
 	width: 200px;
-	left: calc(50% - 110px);
+	margin: 0 auto !important;
+	float: none !important;
+	
+	@include breakpoint(xs) {
+		width: 80%;
+	};
 }
