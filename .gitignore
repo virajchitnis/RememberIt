@@ -34,3 +34,6 @@ public/stylesheets/*
 
 # Ignore javascripts directory because it is dynamically generated via sass
 public/javascripts/*
+
+# Ignore config file
+config.json
