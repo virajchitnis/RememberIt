@@ -1,2 +1,35 @@
 @import "style";
 
+nav.nav-bar {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 5;
+}
+
+div.directory {
+	ul {
+		margin: 0;
+		padding: 0;
+		display: inline-block;
+		list-style-type: none;
+		width: 100%;
+		
+		li {
+			padding-top: 10px;
+			word-wrap: break-word;
+			
+			div.link-bullet {
+				float: left;
+				width: 40px;
+				text-align: center;
+			}
+			div.link-content {
+				float: right;
+				width: calc(100% - 40px);
+				border-bottom: 1px solid rgb(221, 221, 221);
+			}
+		}
+	}
+}

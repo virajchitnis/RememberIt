@@ -115,6 +115,11 @@ div.panel {
 	padding-bottom: 10px;
 	padding-left: 15px;
 	padding-right: 15px;
+	margin-bottom: 10px;
+	
+	* {
+		color: rgb(70, 70, 70);
+	}
 	
 	div.panel-heading {
 		text-align: center;
@@ -231,4 +236,16 @@ nav.nav-bar {
 			padding-top: 9px;
 		}
 	}
+}
+
+div.container {
+	width: 90%;
+	margin: 0 auto !important;
+	float: none !important;
+}
+
+hr {
+	height: 1px;
+	border: none;
+	background-color: rgb(221, 221, 221);
 }
