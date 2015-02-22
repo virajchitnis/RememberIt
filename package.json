@@ -5,9 +5,11 @@
 	"scripts": {
 		"sass-index": "node-sass --debug --output-style compressed design/index.scss -o public/stylesheets/",
 		"sass-login": "node-sass --debug --output-style compressed design/login.scss -o public/stylesheets/",
+		"js-index": "yuicompressor --type js javascripts/index.js -o public/javascripts/index.min.js",
 		"sass": "npm run sass-index && npm run sass-login",
+		"yuicompressor": "npm run js-index",
 		"start-node": "node ./bin/www",
-		"start": "npm run sass && npm run start-node"
+		"start": "npm run sass && npm run yuicompressor && npm run start-node"
 	},
 	"dependencies": {
 		"body-parser": "~1.10.1",
