@@ -34,10 +34,33 @@ div.directory {
 	}
 }
 
+@include keyframes(show-hidden-element) {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.show-hidden {
+	opacity: 1;
+	@include animation(show-hidden-element, 0.45s);
+}
+
+div.directory:hover button.add-button {
+	@extend .show-hidden;
+}
+
+div.directory:active button.add-button {
+	@extend .show-hidden;
+}
+
 button.no-top-margin {
 	margin-top: 0;
 }
 
 button.add-button {
 	margin-bottom: 5px;
+	opacity: 0;
 }
