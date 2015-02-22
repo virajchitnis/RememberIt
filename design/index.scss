@@ -1,5 +1,10 @@
 @import "style";
 
+.show-hidden {
+	opacity: 1;
+	@include animation(show-hidden-element, 0.45s);
+}
+
 nav.nav-bar {
 	width: 100%;
 	position: fixed;
@@ -31,6 +36,10 @@ div.directory {
 				border-bottom: 1px solid rgb(221, 221, 221);
 			}
 		}
+		
+		li:hover button.delete-button {
+			@extend .show-hidden;
+		}
 	}
 }
 
@@ -41,11 +50,6 @@ div.directory {
 	100% {
 		opacity: 1;
 	}
-}
-
-.show-hidden {
-	opacity: 1;
-	@include animation(show-hidden-element, 0.45s);
 }
 
 div.directory:hover button.add-button {
@@ -62,5 +66,9 @@ button.no-top-margin {
 
 button.add-button {
 	margin-bottom: 5px;
+	opacity: 0;
+}
+
+button.delete-button {
 	opacity: 0;
 }
