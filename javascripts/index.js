@@ -1,12 +1,16 @@
+var userDropDownOpen = false;
+
 $(document).ready(function() {
-	$(".nav-dropdown-link").hover(
-		function () {
+	$(".nav-dropdown-link").click(function() {
+		if (!userDropDownOpen) {
 			showUserDropdown();
-		}, 
-		function () {
-			hideUserDropdown();
+			userDropDownOpen = true;
 		}
-	);
+		else {
+			hideUserDropdown();
+			userDropDownOpen = false;
+		}
+	});
 });
 
 function showUserDropdown() {
